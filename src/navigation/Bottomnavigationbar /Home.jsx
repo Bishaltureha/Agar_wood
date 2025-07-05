@@ -19,7 +19,7 @@ const Home = () => {
 
     if (name) setUserName(name);
     setTotalPoints(points || 1200);
-    setTreeCount(count);
+    setTreeCount(count || 5);
   }, []);
 
   useFocusEffect(
@@ -29,7 +29,7 @@ const Home = () => {
       const count = getTreeCount();
 
       if (name) setUserName(name);
-      setTotalPoints(points || 0);
+      setTotalPoints(points);
       setTreeCount(count);
     }, []),
   );
