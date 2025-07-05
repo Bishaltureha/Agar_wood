@@ -1,5 +1,23 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Animated, StyleSheet, Text, View, Dimensions } from 'react-native';
+import {
+  Animated,
+  StyleSheet,
+  Text,
+  View,
+  Dimensions,
+  Image,
+  FlatList,
+} from 'react-native';
+
+// Import your 8 images
+import img1 from '../../Assets/tree1.jpeg';
+import img2 from '../../Assets/tree2.jpeg';
+import img3 from '../../Assets/tree3.jpeg';
+import img4 from '../../Assets/tree4.jpeg';
+import img5 from '../../Assets/tree5.jpeg';
+import img6 from '../../Assets/tree6.jpeg';
+import img7 from '../../Assets/tree7.jpeg';
+import img8 from '../../Assets/tree8.jpeg';
 
 const { width } = Dimensions.get('window');
 const SPACING = 20;
@@ -7,14 +25,14 @@ const ITEM_WIDTH = width * 0.7;
 const ITEM_HEIGHT = 410;
 
 const DATA = [
-  { id: '1', title: '' },
-  { id: '2', title: '' },
-  { id: '3', title: '' },
-  { id: '4', title: '' },
-  { id: '5', title: '' },
-  { id: '6', title: '' },
-  { id: '7', title: '' },
-  { id: '8', title: '' },
+  { id: '1', title: '', image: img1 },
+  { id: '2', title: '', image: img2 },
+  { id: '3', title: '', image: img3 },
+  { id: '4', title: '', image: img4 },
+  { id: '5', title: '', image: img5 },
+  { id: '6', title: '', image: img6 },
+  { id: '7', title: '', image: img7 },
+  { id: '8', title: '', image: img8 },
 ];
 
 const AnimatedCard = ({ item, index, scrollX }) => {
@@ -32,6 +50,9 @@ const AnimatedCard = ({ item, index, scrollX }) => {
 
   return (
     <Animated.View style={[styles.card, { transform: [{ scale }] }]}>
+      <View style={styles.imageContainer}>
+        <Image source={item.image} style={styles.image} resizeMode="cover" />
+      </View>
       <Text style={styles.cardText}>{item.title}</Text>
     </Animated.View>
   );
@@ -107,8 +128,20 @@ const styles = StyleSheet.create({
     height: ITEM_HEIGHT,
     backgroundColor: '#EBF8F1',
     borderRadius: 16,
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
+    overflow: 'hidden',
+  },
+  imageContainer: {
+    width: '100%',
+    height: '100%',
+    borderTopLeftRadius: 16,
+    borderTopRightRadius: 16,
+    overflow: 'hidden',
+  },
+  image: {
+    width: '100%',
+    height: '100%',
   },
   cardText: {
     fontWeight: 'bold',
@@ -116,6 +149,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingHorizontal: 10,
     color: '#000',
+    paddingTop: 8,
   },
   textContainer: {
     marginTop: 24,
