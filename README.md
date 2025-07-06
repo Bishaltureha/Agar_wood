@@ -4,7 +4,27 @@
 
 ## Introduction
 
-The primary objective of this project is to create a tailored product recommendation system. Our aim is to design an algorithm capable of accurately and meaningfully suggesting products that align with the user's preferences, ultimately reducing the likelihood of product returns.
+📱 Land Ownership App
+This is a React Native mobile application designed to manage and document land ownership details. Users can register land plots, upload ownership and revenue documents, mark GPS locations, and track the number of trees on their land.
+
+The app guides users through a clean onboarding process — including language selection, permission setup, OTP verification, and profile registration with support for multiple landowners.
+
+✨ Key Features
+🌐 Multi-language support (Assamese, Hindi, English)
+
+🔐 OTP-based phone number verification
+
+📍 Auto GPS location detection for land
+
+📤 Upload ownership and revenue documents
+
+🌲 Track number of trees for each land plot
+
+👥 Support for Main, Second & Third Owner profiles
+
+🗃️ MMKV local storage for offline persistence
+
+📚 Clean and modern UI with easy navigation
 
 ---
 
