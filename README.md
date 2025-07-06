@@ -20,7 +20,7 @@ The app guides users through a clean onboarding process — including language s
 
 🌲 Track number of trees for each land plot
 
-👥 Support for Main, Second & Third Owner profiles
+👥 Support for Main Owner profiles
 
 🗃️ MMKV local storage for offline persistence
 
