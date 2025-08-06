@@ -10,7 +10,7 @@ This is a React Native mobile application designed to manage and document land o
 The app guides users through a clean onboarding process — including language selection, permission setup, OTP verification, and profile registration with support for multiple landowners.
 
 ✨ Key Features
-🌐 Multi-language support (Assamese, Hindi, English)
+🌐 Multi-language support (Hindi, English)
 
 🔐 OTP-based phone number verification
 
